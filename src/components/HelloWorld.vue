@@ -1,11 +1,18 @@
  <!-- ----------------------TEMPLATAE START--------------- -->
 
 <template>
-  <el-row>
-    <el-col :span="24">
+  <el-row :gutter="20">
+    <el-col :span="12">
       <div class="grid-content bg-purple-dark">
         <div id="root">
-          <h1>{{msg}}</h1>
+          <h1 class="m-0">{{msg}}</h1>
+        </div>
+      </div>
+    </el-col>
+    <el-col :span="12">
+      <div class="grid-content bg-purple-dark">
+        <div id="root">
+          <h1 class="m-0"><el-input v-model="msg"></el-input></h1>
         </div>
       </div>
     </el-col>
@@ -17,16 +24,14 @@
 <!-- ----------------------SCRIPT START--------------- -->
 
 <script>
-// IMPORTS //
-import Vue from "vue";
-
-// DECLERATIONS //
-new Vue({
-  el: "#root",
-  data: {
-    msg: "This is my First app"
+export default {
+  name: 'HelloWorld',
+  data: ()=> {
+    return {
+      msg: 'This is my first Vue-app'
+    }
   }
-});
+}
 </script>
 
 <!-- ----------------------SCRIPT END--------------- -->
@@ -34,30 +39,13 @@ new Vue({
 <!-- ----------------------STYLE START--------------- -->
 
 <style>
-.ulClass {
-  list-style: none;
-}
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.el-button,
-li {
-  font-size: 20px !important;
-}
-.el-dialog__title {
-  font-size: 30px !important;
-  border-bottom: 2px solid #303133;
+@import './../assets/style.css';
+.bg-purple-dark {
+    background: var(--purpleBg);
+    border-radius: 5px;
+  }
+.m-0 {
+  margin: 0px;
 }
 </style>
 
