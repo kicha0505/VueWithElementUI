@@ -1,7 +1,6 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="PerentDiv">
+    <HelloWorld />
   </div>
 </template>
 
@@ -9,7 +8,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
+  name: 'PerentDiv',
   components: {
     HelloWorld
   }
@@ -17,12 +16,13 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+#PerentDiv {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: 20px;
 }
 </style>
